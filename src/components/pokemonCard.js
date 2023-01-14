@@ -23,8 +23,11 @@ export const Pokemon = () => {
               <div class="p-5 flex-col flex items-center">
                 <span className="font-bold text-lg">Abilities</span>
                 <div className="flex gap-2">
-                  {pokemon.abilities.map((item) => (
-                    <span class="py-2 px-4 shadow-md no-underline rounded-full text-sm border-blue">
+                  {pokemon.abilities.map((item, id) => (
+                    <span
+                      key={id}
+                      class="py-2 px-4 shadow-md no-underline rounded-full text-sm border-blue"
+                    >
                       {item.ability.name}
                     </span>
                   ))}
@@ -35,8 +38,11 @@ export const Pokemon = () => {
               <div class="mb-2  flex-col flex items-center ">
                 <span className="font-bold text-lg">Stats</span>
                 <div className="flex w-full gap-2">
-                  {pokemon.stats.map((item) => (
-                    <span class="py-2 px-4 shadow-md no-underline text-sm rounded-full ">
+                  {pokemon.stats.map((item, id) => (
+                    <span
+                      key={id}
+                      class="py-2 px-4 shadow-md no-underline text-sm rounded-full "
+                    >
                       {`${item.stat.name} : ${item.base_stat}`}
                     </span>
                   ))}
@@ -47,8 +53,11 @@ export const Pokemon = () => {
               <div class="p-5 flex-col flex items-center">
                 <span className="font-bold text-lg">Held Items</span>
                 <div className="flex gap-2 ">
-                  {pokemon.held_items.map((item) => (
-                    <span class="py-2 px-4 shadow-md no-underline rounded-full text-sm border-blue">
+                  {pokemon.held_items.map((item, id) => (
+                    <span
+                      key={id}
+                      class="py-2 px-4 shadow-md no-underline rounded-full text-sm border-blue"
+                    >
                       {`${item.item.name}`}
                     </span>
                   ))}
